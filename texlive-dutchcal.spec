@@ -1,3 +1,9 @@
+# revision 23448
+# category Package
+# catalog-ctan /fonts/dutchcal
+# catalog-date 2011-06-24 10:20:36 +0200
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-dutchcal
 Version:	1.0
 Release:	1
@@ -51,6 +57,7 @@ the SIL OPEN FONT LICENSE, version 1.1.
 %{_texmfdistdir}/tex/latex/dutchcal/dutchcal.sty
 %{_texmfdistdir}/tex/latex/dutchcal/udutchcal.fd
 %doc %{_texmfdistdir}/doc/fonts/dutchcal/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ the SIL OPEN FONT LICENSE, version 1.1.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
