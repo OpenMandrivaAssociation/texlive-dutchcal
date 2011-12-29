@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 This package reworks the mathematical calligraphic font
@@ -26,20 +25,12 @@ included. The new fonts may also be accessed from the most
 recent version of mathalfa. The fonts themselves are subject to
 the SIL OPEN FONT LICENSE, version 1.1.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -58,7 +49,6 @@ the SIL OPEN FONT LICENSE, version 1.1.
 %{_texmfdistdir}/tex/latex/dutchcal/dutchcal.sty
 %{_texmfdistdir}/tex/latex/dutchcal/udutchcal.fd
 %doc %{_texmfdistdir}/doc/fonts/dutchcal/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,5 +59,3 @@ the SIL OPEN FONT LICENSE, version 1.1.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
