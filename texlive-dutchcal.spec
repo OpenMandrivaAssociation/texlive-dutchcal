@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-dutchcal
 Version:	1.0
-Release:	7
+Release:	8
 Summary:	A reworking of ESSTIX13, adding a bold version
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/dutchcal
