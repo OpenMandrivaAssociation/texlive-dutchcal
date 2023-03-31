@@ -1,6 +1,6 @@
 Name:		texlive-dutchcal
 Version:	54080
-Release:	1
+Release:	2
 Summary:	A reworking of ESSTIX13, adding a bold version
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/dutchcal
