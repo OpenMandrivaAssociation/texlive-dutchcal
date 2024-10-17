@@ -3,7 +3,7 @@ Version:	54080
 Release:	2
 Summary:	A reworking of ESSTIX13, adding a bold version
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/dutchcal
+URL:		https://www.ctan.org/tex-archive/fonts/dutchcal
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dutchcal.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dutchcal.doc.r%{version}.tar.xz
